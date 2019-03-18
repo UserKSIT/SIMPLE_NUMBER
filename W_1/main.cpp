@@ -30,8 +30,9 @@ inline int binary_search(int key){
 
 int main(int argc, const char * argv[]) {
     //если у нас нечётное число аргументов - error
-    if (argc % 3 != 0)
+    if (argc == 1 || !(argc % 2))
         return -1;
+    
     
     unsigned int result = 0;
     unsigned int current_position = 0;
@@ -46,7 +47,6 @@ int main(int argc, const char * argv[]) {
         
         //проверка корректности диапазона
         if (to <= from){
-            //std::cout << "Incorrect input" << std::endl;
             std::cout << "0" << std::endl;
             return 0;
         }
